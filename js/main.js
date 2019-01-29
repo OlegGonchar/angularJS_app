@@ -71,6 +71,6 @@
             service.getItems = function(){
                 return items;
             }
-    }
+    };
 
 })()
