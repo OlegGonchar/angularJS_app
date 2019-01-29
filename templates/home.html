@@ -1,0 +1,43 @@
+<nav class="navbar navbar-light" style="background-color: #a9afff;">
+        <div class="row">
+                <div class="col-md-6">
+                        <a class="navbar-brand" href="#">Vacation planner!</a>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                        <a class='btn btn-light' ui-sref ="ukr">Ukrainian</a>
+                </div>
+        </div>
+</nav>
+<h1>Make a list of your vacation comrades!</h1>
+Weather in London: <span ng-controller="WeatherControllerLondon as weather">
+        <img src="https://openweathermap.org/img/w/{{weather.pic}}.png" alt="weather"> {{weather.temp|number:0}} C
+</span>
+<hr>
+<div class="container">
+        <a class="btn btn-success" ui-sref ="add">Add new friend to the list!</a>
+        <hr>
+        <div ng-controller="FriendsList as friendList">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="item in friendList.items">
+                    <div class="row">
+                        <div class="col-md-1">
+                                {{$index+1}}
+                        </div>
+                        <div class="col-md-3">
+                                {{item.name}}
+                        </div>
+                        <div class="col-md-3">
+                                {{item.phone}}
+                        </div>
+                        <div class="col-md-2">
+                                <a class='btn btn-light' ng-click="friendList.removeItem($index)">Delete</a>
+                        </div>
+                        <div class="col-md-2">
+                                <a class='btn btn-light' ng-click="friendList.editItem($index)" ui-sref="edit">Edit</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>     

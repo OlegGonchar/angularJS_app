@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light" style="background-color: #a9afff;">
+    <a class="navbar-brand" href="#">Vacation planner!</a>
+</nav>
+<h1>Make a list of your vacation comrades!</h1>
+<hr>
+<div class="container">
+<form ng-controller="FriendsListEdit as edit">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control" ng-model="edit.item[0]">
+                </div>
+            </div>
+            <div class="col=md-6">
+                <div class="form-group">
+                    <label for="inputPhone">Phone Number</label>
+                    <input type="text" class="form-control" id="inputPhone" ng-model="edit.item[1]">
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-light" ui-sref ="home" ng-click="edit.addItem()">Save</a>
+        <a class="btn btn-light" ui-sref ="home" ng-click="edit.cancel()">Cancel</a>
+    </form>
+</div>

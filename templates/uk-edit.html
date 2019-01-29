@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light" style="background-color: #a9afff;">
+        <a class="navbar-brand" href="#">Планувальник відпустки!</a>
+    </nav>
+    <h1>Створи список компаньонів для відпустки!</h1>
+    <hr>
+    <div class="container">
+    <form ng-controller="FriendsListEdit as edit">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Ім'я</label>
+                        <input type="text" class="form-control" ng-model="edit.item[0]">
+                    </div>
+                </div>
+                <div class="col=md-6">
+                    <div class="form-group">
+                        <label for="inputPhone">Номер телефону</label>
+                        <input type="text" class="form-control" id="inputPhone" ng-model="edit.item[1]">
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-light" ui-sref ="ukr" ng-click="edit.addItem()">Зберегти</a>
+            <a class="btn btn-light" ui-sref ="ukr" ng-click="edit.cancel()">Відмінити</a>
+        </form>
+    </div>

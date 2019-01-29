@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light" style="background-color: #a9afff;">
+    <a class="navbar-brand" href="#">Vacation planner!</a>
+</nav>
+<h1>Make a list of your vacation comrades!</h1>
+<hr>
+<div class="container">
+<form ng-controller="FormInput as itemAdder">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control" placeholder="name" ng-model="itemAdder.itemName">
+                </div>
+            </div>
+            <div class="col=md-6">
+                <div class="form-group">
+                    <label for="inputPhone">Phone Number</label>
+                    <input type="text" class="form-control" id="inputPhone" placeholder="+*(***)***-**-**" ng-model='itemAdder.itemPhone'>
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-light" ui-sref ="home" ng-click="itemAdder.addItem()">Add</a>
+    </form>
+</div>
