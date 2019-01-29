@@ -3,8 +3,11 @@
 angular.module('app')
 .config(RoutesConfig);
 
-RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
-function RoutesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+// RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
+// function RoutesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+
+RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+function RoutesConfig($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/home'); 
 
     $stateProvider 
@@ -35,6 +38,6 @@ function RoutesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         templateUrl: 'templates/uk-edit.html'
     });
     
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
 }
 })()
