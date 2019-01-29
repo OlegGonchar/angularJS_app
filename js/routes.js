@@ -35,6 +35,9 @@ function RoutesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         templateUrl: 'templates/uk-edit.html'
     });
     
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+      });
 }
 })()
